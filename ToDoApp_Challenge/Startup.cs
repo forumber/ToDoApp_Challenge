@@ -31,7 +31,7 @@ namespace ToDoApp_Challenge
             services.AddCouchbase(Configuration.GetSection("Couchbase"));
 
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(
+                options.UseSqlite(
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDatabaseDeveloperPageExceptionFilter();
 
